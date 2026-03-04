@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: radial-gradient(circle at top, #0a1f44, #000814);
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #00d4ff;
+  text-shadow: 0 0 15px #00d4ff;
+}
+
+h2 {
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+button {
+  background: linear-gradient(45deg, #005bea, #00c6fb);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #001d3d;
+  padding: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+tr:hover {
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.total {
+  font-weight: bold;
+  color: #00d4ff;
+}
+
+#ranking {
+  margin-top:20px;
+}
+
+#ranking ol{
+  list-style:none;
+  padding:0;
+}
+
+#ranking li{
+  background:rgba(255,255,255,0.08);
+  margin:8px auto;
+  padding:12px;
+  width:300px;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:18px;
+}
+
+#ranking li:nth-child(1){
+  background:gold;
+  color:black;
+}
+
+#ranking li:nth-child(2){
+  background:silver;
+  color:black;
+}
+
+#ranking li:nth-child(3){
+  background:#cd7f32;
+} 

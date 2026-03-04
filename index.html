@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Hala Madrid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Quizz Spécial Hala Madrid</h1>
+
+<h2>Ajouter un joueur</h2>
+<input type="text" id="playerName" placeholder="Nom du joueur">
+<button onclick="addPlayer()">Ajouter</button>
+
+<h2>Manche actuelle : <span id="roundNumber">1</span></h2>
+
+<select id="playerSelect"></select>
+
+<select id="points">
+  <option value="5">5 points</option>
+  <option value="3">3 points</option>
+  <option value="1">1 point</option>
+</select>
+
+<button onclick="addPoints()">Ajouter points</button>
+
+<br><br>
+<button onclick="nextRound()">Finir la manche</button>
+<button onclick="showFinalRanking()">Classement final</button>
+
+<h2>Scores par manche</h2>
+<div id="scoresTable"></div>
+
+<h2>Modification</h2>
+
+<select id="editRound"></select>
+<select id="editPlayer"></select>
+
+<input type="number" id="newScore" placeholder="Nouveau score">
+
+<button onclick="updateScore()">Modifier</button>
+
+<br><br>
+<button onclick="resetGame()">Reset complet</button>
+
+<h2>Classement en direct</h2>
+<div id="ranking"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
