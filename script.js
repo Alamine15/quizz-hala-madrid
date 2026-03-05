@@ -99,6 +99,49 @@ function updateScore() {
     displayScores();
 
     document.getElementById("newScore").value = "";
+    const sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQKDritpI-usAxo8q4wxbiSINQFZtyCb3pCgh5b6s3pssg6CSJk1aD9nhqp4giXLkEp3DRqbO2-9io9/pub?output=csv";
+
+fetch(sheetURL)
+.then(response => response.text())
+.then(data => {
+
+const rows = data.split("\n").slice(1);
+
+let players = [];
+
+rows.forEach(row => {
+
+const cols = row.split(",");
+
+players.push({
+name: cols[0],
+m1: cols[1],
+m2: cols[2],
+m3: cols[3],
+total: cols[4]
+});
+
+});
+
+displayRanking(players);
+
+});
+
+function displayRanking(players){
+
+players.sort((a,b)=>b.total-a.total);
+
+let html="<ol>";
+
+players.forEach(p=>{
+html+=`<li>${p.name} — ${p.total} pts</li>`;
+});
+
+html+="</ol>";
+
+document.getElementById("ranking").innerHTML=html;
+
+}
 
   }
 }
